@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dalla grafica alla pagina web</title>
+<title>Dalla grafica alla pagina web — Federica Carcione</title>
 <meta name="description" content="Progetti grafici trasformati in semplici pagine web: esperimenti personali con AI, HTML e CSS di base.">
 <link rel="icon" type="image/png" href="https://i.imgur.com/1yuDYnI.png">
 
@@ -94,6 +94,50 @@ header.scrolled .nav{padding:.95rem var(--pad)}
 .meta strong{display:block;color:var(--ink);font-weight:400;font-family:var(--serif);font-size:1.05rem;margin-bottom:.4rem}
 .hero-line{width:60px;height:1px;background:var(--accent);margin-top:2.5rem;transform-origin:left;animation:grow 1.2s cubic-bezier(.2,.8,.2,1) .4s both}
 @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+.ai-highlight{
+  position:relative;
+  color:var(--ink);
+  font-weight:400;
+  text-decoration-line:underline;
+  text-decoration-style:dotted;
+  text-decoration-color:var(--accent);
+  text-decoration-thickness:1px;
+  text-underline-offset:4px;
+  transition:
+    color .4s ease,
+    text-decoration-color .4s ease;
+}
+
+.ai-highlight::after{
+  content:'';
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-5px;
+  height:3px;
+  background-image:radial-gradient(
+    circle,
+    var(--accent) 1px,
+    transparent 1.5px
+  );
+  background-size:5px 3px;
+  background-repeat:repeat-x;
+  opacity:.65;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .9s cubic-bezier(.2,.8,.2,1);
+}
+
+.ai-highlight:hover{
+  color:var(--accent);
+  text-decoration-color:var(--ink);
+}
+
+.ai-highlight:hover::after{
+  transform:scaleX(1);
+}
+
 
 /* COUNTER */
 .counter-bar{
@@ -266,7 +310,7 @@ footer{border-top:1px solid var(--line);padding:2.2rem 0;position:relative;z-ind
 
   <div class="hero-grid">
     <p class="lead rv">Questi tre progetti nascono da alcuni miei lavori grafici che ho scelto di portare anche sul web, sperimentando il passaggio dalla progettazione visiva alla realizzazione di una pagina web.<br><br>
-Sto esplorando questo ambito da autodidatta e <strong><u>utilizzo strumenti di intelligenza artificiale, <i>attraverso prompt mirati</strong></i></u>, per sviluppare la struttura e il codice dei siti a partire dalle mie idee e dai miei progetti grafici.<br><br>
+Sto esplorando questo ambito da autodidatta e <span class="ai-highlight">utilizzo strumenti di intelligenza artificiale, attraverso prompt mirati</span>, per sviluppare la struttura e il codice dei siti a partire dalle mie idee e dai miei progetti grafici.<br><br>
 Il risultato viene poi elaborato e personalizzato da me: intervengo sulla scelta e sull'applicazione dei colori, sulla tipografia, sull'inserimento di fotografie, loghi, dettagli grafici e sugli elementi visivi, cercando di mantenere coerenza con il progetto di partenza.</p>
   </div>
   <div class="hero-line"></div>
