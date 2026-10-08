@@ -284,6 +284,40 @@ footer{border-top:1px solid var(--line);padding:2.2rem 0;position:relative;z-ind
   .page-hero{min-height:auto;padding-top:8rem}
   .nav-links{display:none}
 }
+.highlight {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+
+  background: linear-gradient(
+    to top,
+    rgba(138, 123, 95, 0.22) 0%,
+    rgba(138, 123, 95, 0.22) 35%,
+    transparent 35%
+  );
+
+  padding: 0 3px;
+  transition:
+    color 0.35s ease,
+    background 0.35s ease,
+    text-shadow 0.35s ease;
+}
+
+.highlight:hover {
+  color: var(--accent);
+
+  background: linear-gradient(
+    to top,
+    rgba(138, 123, 95, 0.42) 0%,
+    rgba(138, 123, 95, 0.42) 45%,
+    transparent 45%
+  );
+
+  text-shadow:
+    0 0 6px rgba(138, 123, 95, 0.35),
+    0 0 14px rgba(138, 123, 95, 0.18);
+}  
 </style>
 </head>
 <body>
@@ -309,9 +343,9 @@ footer{border-top:1px solid var(--line);padding:2.2rem 0;position:relative;z-ind
   <h1 class="rv">Dalla grafica<br><em>alla pagina web</em></h1>
 
   <div class="hero-grid">
-    <p class="lead rv">Questi tre progetti nascono da alcuni miei lavori grafici che ho scelto di portare anche sul web, sperimentando il passaggio dalla progettazione visiva alla realizzazione di una pagina web.<br><br>
+    <p class="lead rv">Questi tre progetti nascono da alcuni miei lavori grafici che ho scelto di portare anche sul web, <span class="highlight">sperimentando il passaggio dalla progettazione visiva alla realizzazione di una pagina web.</span><br><br>
 Sto esplorando questo ambito da autodidatta e <span class="ai-highlight">utilizzo strumenti di intelligenza artificiale, attraverso prompt mirati</span>, per sviluppare la struttura e il codice dei siti a partire dalle mie idee e dai miei progetti grafici.<br><br>
-Il risultato viene poi elaborato e personalizzato da me: intervengo sulla scelta e sull'applicazione dei colori, sulla tipografia, sull'inserimento di fotografie, loghi, dettagli grafici e sugli elementi visivi, cercando di mantenere coerenza con il progetto di partenza.</p>
+<span class="highlight">Il risultato viene poi elaborato e personalizzato da me:</span> intervengo sulla scelta e sull'applicazione dei colori, sulla tipografia, sull'inserimento di fotografie, loghi, dettagli grafici e sugli elementi visivi, cercando di mantenere coerenza con il progetto di partenza.</p>
   </div>
   <div class="hero-line"></div>
 </div>
